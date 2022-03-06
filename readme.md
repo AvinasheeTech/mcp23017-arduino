@@ -1,7 +1,11 @@
   MCP23017 library for arduino based environment.
+  
   example is based on ESP-32 board.
+  
   choose mcp23017 address based on logic levels of your hardware addressable pins.
+  
   select sda and scl pin number based on the board you choose. (Default SDA-21, SCL-22 for esp32).
+  
   configuration register iocon consists of bank bit that determines register banks address formatting. 
   before switching register address make sure to write to bank bit accordingly.(Default bank bit = 0).
   

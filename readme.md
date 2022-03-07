@@ -9,6 +9,8 @@
   configuration register iocon consists of bank bit that determines register banks address formatting. 
   before switching register address make sure to write to bank bit accordingly.(Default bank bit = 0).
   
+  select gpio port - PORTA = 0x00, PORTB = 0x01.
+  
   functions available : 
   
   uint8_t read(uint16_t reg, uint8_t address);             //read register

@@ -13,8 +13,8 @@ void setup() {
   // put your setup code here, to run once:
 
   /*set i/o pin direction as output for both ports A and B*/
-  mcp1.iodir(0, 0x00 , MCP23017_ADDRESS_21);
-  mcp1.iodir(1, 0x00 , MCP23017_ADDRESS_21);
+  mcp1.iodir(0, 0x00 , MCP23017_ADDRESS_21);                  //send port=0x00 for GPIOA
+  mcp1.iodir(1, 0x00 , MCP23017_ADDRESS_21);                  //send port=0x01 for GPIOB
 
 }
 

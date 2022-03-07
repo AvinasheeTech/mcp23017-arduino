@@ -158,9 +158,12 @@ void MCP23017::clear_gpio_bit(uint8_t port, uint8_t pin, uint8_t address)
 {
   /*read existing port data*/
   uint8_t reg_data = read_gpio(port,address);
+  
+  pin = (1<<pin);
+  pin ^= 0xFF;
 
   Wire.beginTransmission(address);
   Wire.write(REGISTER_GPIOA | port);
-  Wire.write(reg_data & (~(1<<pin)));
+  Wire.write(reg_data & pin);
   Wire.endTransmission();
 }

@@ -168,7 +168,7 @@
 
 class MCP23017 {
 public:
-  MCP23017(uint8_t sda=21,uint scl=22);      //constructor with default sda and scl pins 
+  MCP23017(uint8_t sda=21,uint8_t scl=22);      //constructor with default sda and scl pins 
 
   /*functions for operations*/
   uint8_t read(uint16_t reg, uint8_t address);

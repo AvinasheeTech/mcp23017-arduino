@@ -13,8 +13,8 @@ void setup() {
   // put your setup code here, to run once:
 
   /*set i/o pin direction as output for both ports A and B*/
-  mcp1.iodir(0, 0x00 , MCP23017_ADDRESS_21);                  //send port=0x00 for GPIOA
-  mcp1.iodir(1, 0x00 , MCP23017_ADDRESS_21);                  //send port=0x01 for GPIOB
+  mcp1.iodir(MCP23017_PORTA, MCP23017_IODIR_ALL_OUTPUT , MCP23017_ADDRESS_21);
+  mcp1.iodir(MCP23017_PORTB, MCP23017_IODIR_ALL_OUTPUT , MCP23017_ADDRESS_21);
 
 }
 
@@ -22,14 +22,14 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   /*set gpio port A and B output as high*/
-  mcp1.write_gpio(0,  0xFF , MCP23017_ADDRESS_21);
-  mcp1.write_gpio(1,  0xFF , MCP23017_ADDRESS_21);
+  mcp1.write_gpio(MCP23017_PORTA,  0xFF , MCP23017_ADDRESS_21);
+  mcp1.write_gpio(MCP23017_PORTB,  0xFF , MCP23017_ADDRESS_21);
 
   delay(500);
 
   /*set gpio port A and B output as low*/
-  mcp1.write_gpio(0,  0x00 , MCP23017_ADDRESS_21);
-  mcp1.write_gpio(1,  0x00 , MCP23017_ADDRESS_21);
+  mcp1.write_gpio(MCP23017_PORTA,  0x00 , MCP23017_ADDRESS_21);
+  mcp1.write_gpio(MCP23017_PORTB,  0x00 , MCP23017_ADDRESS_21);
 
   delay(500);
 
